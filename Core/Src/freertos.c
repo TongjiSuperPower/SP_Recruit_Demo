@@ -143,9 +143,9 @@ extern void LED_Blue_task(void const * argument)
 {
 	while(1){
 		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_10,GPIO_PIN_SET);
-		HAL_Delay(500);
+		osDelay(500);
 		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_10,GPIO_PIN_RESET);
-		HAL_Delay(500);
+		osDelay(500);
   }
 }
 
@@ -153,9 +153,9 @@ extern void LED_Green_task(void const * argument)
 {
 	while(1){
 		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_11,GPIO_PIN_SET);
-		HAL_Delay(750);
+		osDelay(750);
 		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_11,GPIO_PIN_RESET);
-		HAL_Delay(750);
+		osDelay(750);
   }
 }
 /* USER CODE END Application */

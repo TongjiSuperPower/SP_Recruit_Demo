@@ -1,7 +1,7 @@
 zero\freertos.o: ../Core/Src/freertos.c
 zero\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-zero\freertos.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
-zero\freertos.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+zero\freertos.o: F:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+zero\freertos.o: F:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 zero\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 zero\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 zero\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -37,6 +37,8 @@ zero\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 zero\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 zero\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 zero\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+zero\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+zero\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 zero\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 zero\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 zero\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

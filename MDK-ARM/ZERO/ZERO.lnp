@@ -1,8 +1,9 @@
---cpu=Cortex-M4.fp.sp
+--cpu=Cortex-M4.fp
 "zero\startup_stm32f407xx.o"
 "zero\main.o"
 "zero\gpio.o"
 "zero\freertos.o"
+"zero\tim.o"
 "zero\stm32f4xx_it.o"
 "zero\stm32f4xx_hal_msp.o"
 "zero\stm32f4xx_hal_rcc.o"
@@ -31,7 +32,8 @@
 "zero\cmsis_os.o"
 "zero\heap_4.o"
 "zero\port.o"
+"zero\servotask.o"
 --strict --scatter "ZERO\ZERO.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "ZERO.map" -o ZERO\ZERO.axf

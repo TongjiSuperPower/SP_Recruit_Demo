@@ -25,7 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "LEDTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,11 +53,11 @@ osThreadId ServoTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-extern void LED_Green_task(void const * argument);
+void LED_Green_task(void const * argument);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-extern void LED_Blue_task(void const * argument);
+void LED_Blue_task(void const * argument);
 void Servo_Task(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -163,40 +163,5 @@ __weak void Servo_Task(void const * argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-int LED_flag = 0;
-int LED_flag2 = 0;
 
-extern void LED_Blue_task(void const * argument)
-{
-	while(1){
-		
-		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_10,GPIO_PIN_SET);
-<<<<<<< HEAD
-		osDelay(200);
-		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_10,GPIO_PIN_RESET);
-		osDelay(200);
-		
-=======
-		osDelay(500);
-		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_10,GPIO_PIN_RESET);
-		osDelay(500);
->>>>>>> d77c5f82aa3bb4ab233752defcf708a57d13b5ee
-  }
-}
-
-extern void LED_Green_task(void const * argument)
-{
-	while(1){
-		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_11,GPIO_PIN_SET);
-<<<<<<< HEAD
-		osDelay(300);
-		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_11,GPIO_PIN_RESET);
-		osDelay(300);
-=======
-		osDelay(750);
-		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_11,GPIO_PIN_RESET);
-		osDelay(750);
->>>>>>> d77c5f82aa3bb4ab233752defcf708a57d13b5ee
-  }
-}
 /* USER CODE END Application */

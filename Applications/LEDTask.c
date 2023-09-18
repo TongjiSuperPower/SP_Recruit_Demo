@@ -2,7 +2,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 
-extern void LED_Blue_task(void const * argument)
+void LED_Blue_task(void const * argument)
 {
 	while(1){
 		
@@ -14,7 +14,7 @@ extern void LED_Blue_task(void const * argument)
   }
 }
 
-extern void LED_Green_task(void const * argument)
+void LED_Green_task(void const * argument)
 {
 	while(1){
 		HAL_GPIO_WritePin(GPIOH,GPIO_PIN_11,GPIO_PIN_SET);

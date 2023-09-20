@@ -50,14 +50,16 @@ osThreadId LED_GreenHandle;
 osThreadId defaultTaskHandle;
 osThreadId LED_BlueHandle;
 osThreadId ServoTaskHandle;
+osThreadId MotorTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 void LED_Green_task(void const * argument);
+void motor_task(void const * argument);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void LED_Blue_task(void const * argument);
+extern void LED_Blue_task(void const * argument);
 void Servo_Task(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -121,6 +123,9 @@ void MX_FREERTOS_Init(void) {
   /* add threads, ... */
   osThreadDef(LED_Green, LED_Green_task, osPriorityNormal, 0, 128);
   LED_GreenHandle = osThreadCreate(osThread(LED_Green), NULL);
+	
+	osThreadDef(MotorTask, motor_task, osPriorityNormal, 0, 128);
+  MotorTaskHandle = osThreadCreate(osThread(MotorTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
 }

@@ -1,11 +1,13 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "zero\startup_stm32f407xx.o"
 "zero\main.o"
 "zero\gpio.o"
 "zero\freertos.o"
+"zero\can.o"
 "zero\tim.o"
 "zero\stm32f4xx_it.o"
 "zero\stm32f4xx_hal_msp.o"
+"zero\stm32f4xx_hal_can.o"
 "zero\stm32f4xx_hal_rcc.o"
 "zero\stm32f4xx_hal_rcc_ex.o"
 "zero\stm32f4xx_hal_flash.o"
@@ -34,7 +36,9 @@
 "zero\port.o"
 "zero\servotask.o"
 "zero\ledtask.o"
+"zero\motortask.o"
+"zero\can_receive.o"
 --strict --scatter "ZERO\ZERO.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "ZERO.map" -o ZERO\ZERO.axf

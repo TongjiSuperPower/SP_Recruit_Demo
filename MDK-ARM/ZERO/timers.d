@@ -1,8 +1,8 @@
 zero\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
-zero\timers.o: F:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+zero\timers.o: D:\keil_v5\keil_core\ARM\ARMCC\Bin\..\include\stdlib.h
 zero\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-zero\timers.o: F:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-zero\timers.o: F:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+zero\timers.o: D:\keil_v5\keil_core\ARM\ARMCC\Bin\..\include\stddef.h
+zero\timers.o: D:\keil_v5\keil_core\ARM\ARMCC\Bin\..\include\stdint.h
 zero\timers.o: ../Core/Inc/FreeRTOSConfig.h
 zero\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 zero\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

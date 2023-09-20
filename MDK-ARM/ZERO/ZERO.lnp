@@ -38,6 +38,7 @@
 "zero\ledtask.o"
 "zero\motortask.o"
 "zero\can_receive.o"
+"zero\pid.o"
 --strict --scatter "ZERO\ZERO.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

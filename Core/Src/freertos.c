@@ -46,11 +46,11 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 osThreadId LED_GreenHandle;
+osThreadId MotorTaskHandle;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId LED_BlueHandle;
 osThreadId ServoTaskHandle;
-osThreadId MotorTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */

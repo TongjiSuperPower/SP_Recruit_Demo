@@ -34,6 +34,21 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 			case 0x201:
 			{
 				get_motor_measure(&motor1,rx_data);
+				if((motor1.ecd - motor1.last_ecd) > 4096)
+				{
+					motor_3508.round_num --;
+				}
+				else if((motor1.ecd - motor1.last_ecd) < -4096)
+				{
+					motor_3508.round_num ++;
+				}
+				motor_3508.relative_angle = rad_format((float)((motor1.ecd - motor_3508.offecd_ecd) + motor_3508.round_num * 8092) / 8192 / 19.02 * 2 * PI);
+				motor_3508.relative_speed = (float)motor1.speed_rpm / 8192 * 2 * PI / 19.02;
+				break;
+			}
+			case 0x205:
+			{
+				get_motor_measure(&motor2,rx_data);
 				break;
 			}
 			default:
@@ -72,4 +87,25 @@ void CAN_cmd_motor3508(int16_t motor1, int16_t motor2, int16_t motor3, int16_t m
 	
 }
 
+void CAN_cmd_motor6020(int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4)
+{
+	uint32_t send_mail_box2;
+	CAN_TxHeaderTypeDef Txheader2;
+	Txheader2.StdId = 0x1ff;
+	Txheader2.IDE = CAN_ID_STD;
+	Txheader2.DLC = 0x08;
+	Txheader2.RTR = CAN_RTR_DATA;
+	uint8_t CAN_send_data2[8];
+	CAN_send_data2[0] = motor1 >> 8 ;
+	CAN_send_data2[1] = motor1;
+	CAN_send_data2[2] = motor2 >> 8 ;
+	CAN_send_data2[3] = motor2;
+	CAN_send_data2[4] = motor3 >> 8 ;
+	CAN_send_data2[5] = motor3;
+	CAN_send_data2[6] = motor4 >> 8 ;
+	CAN_send_data2[7] = motor4;
+
+	HAL_CAN_AddTxMessage(&hcan1,&Txheader2,CAN_send_data2,&send_mail_box2);
+	
+}
 

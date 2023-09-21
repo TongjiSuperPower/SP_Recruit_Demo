@@ -24,8 +24,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		if(key_delay == 0)
 		{
 		motor_flag = 1;
-		}
 		key_delay = 1000;
+		}
 	}
 }
 	

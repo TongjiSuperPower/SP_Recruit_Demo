@@ -42,8 +42,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 				{
 					motor_3508.round_num ++;
 				}
-				motor_3508.relative_angle = rad_format((float)((motor1.ecd - motor_3508.offecd_ecd) + motor_3508.round_num * 8092) / 8192 / 19.02 * 2 * PI);
-				motor_3508.relative_speed = (float)motor1.speed_rpm / 8192 * 2 * PI / 19.02;
+				motor_3508.relative_angle = rad_format((float)((motor1.ecd - motor_3508.offecd_ecd) + motor_3508.round_num * 8092) / 8192 / 19.02f * 2 * PI);
+				motor_3508.relative_speed = (float)motor1.speed_rpm / 8192 * 2 * PI / 19.02f;
 				break;
 			}
 			case 0x205:

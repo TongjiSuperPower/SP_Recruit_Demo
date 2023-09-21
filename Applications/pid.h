@@ -24,12 +24,6 @@ typedef struct
     fp32 Pout;
     fp32 Iout;
     fp32 Dout;
-    fp32 Dbuf[3];  //微分项 0最新 1上一次 2上上次
-    fp32 error[3]; //误差项 0最新 1上一次 2上上次
-
-/***后续添加***/	
-		fp32 dT;
-		fp32 max_dout;
 	
 }pid_type_def;
 

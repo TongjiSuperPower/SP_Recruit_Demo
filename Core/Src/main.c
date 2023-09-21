@@ -53,7 +53,7 @@ extern CAN_HandleTypeDef hcan1;
 void SystemClock_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
-void can_filter_init();
+void can_filter_init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -200,8 +200,6 @@ void can_filter_init(void)
 //    HAL_CAN_ConfigFilter(&hcan2, &can_filter_st);
 //    HAL_CAN_Start(&hcan2);
 //    HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO0_MSG_PENDING);
-
-
 
 }
 

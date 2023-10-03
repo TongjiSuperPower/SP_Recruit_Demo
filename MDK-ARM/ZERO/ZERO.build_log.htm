@@ -3,43 +3,47 @@
 <pre>
 <h1>礦ision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: μVision V5.38.0.0
-Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: yang yangjiuchun, 1, LIC=D0D7S-L69GA-KPBZY-IHEF7-N10V4-AZPSQ
+IDE-Version: μVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: WEI TIAN, 1, LIC=65ISZ-J6QXK-124LE-5PS9T-UFX8S-LWIYI
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
-Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 4 (build 422)
-Assembler:       Armasm.exe V5.06 update 4 (build 422)
-Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
-Library Manager: ArmAr.exe V5.06 update 4 (build 422)
-Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
-CPU DLL:         SARMCM3.DLL V5.38.0.0
-Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      CMSIS_AGDI.dll V1.33.15.0
-Dialog DLL:      TCM.DLL V1.56.4.0
+Toolchain:       MDK-ARM Plus  Version: 5.32.0.0
+Toolchain Path:  F:\keil532\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.32.12.0
+Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-D:\桌面\文件\RM\SP_Recruit_Demo\MDK-ARM\ZERO.uvprojx
-Project File Date:  09/20/2023
+F:\RM操作手\SP_Recruit_Demo\MDK-ARM\ZERO.uvprojx
+Project File Date:  09/30/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'F:\keil532\ARM\ARMCC\Bin'
 Build target 'ZERO'
-compiling MotorTask.c...
+assembling startup_stm32f407xx.s...
+compiling remote_control.c...
+remote_control.c(22): warning:  #1-D: last line of file ends without a newline
+  }
+remote_control.c: 1 warning, 0 errors
 linking...
-Program Size: Code=12480 RO-data=664 RW-data=156 ZI-data=18188  
+Program Size: Code=16924 RO-data=716 RW-data=164 ZI-data=18484  
 FromELF: creating hex file...
-"ZERO\ZERO.axf" - 0 Error(s), 0 Warning(s).
+"ZERO\ZERO.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
-                ARM.CMSIS.5.9.0
-                CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.6.0
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
@@ -47,14 +51,14 @@ Package Vendor: Keil
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  ./RTE/_ZERO
-  D:/Keil_v5/ARM/PACK/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  D:/Keil_v5/ARM/PACK/Keil/STM32F4xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  .\RTE\_ZERO
+  F:\keil532\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  F:\keil532\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.6.0
-Build Time Elapsed:  00:00:03
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

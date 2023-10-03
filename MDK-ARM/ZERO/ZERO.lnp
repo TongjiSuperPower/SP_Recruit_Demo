@@ -4,7 +4,9 @@
 "zero\gpio.o"
 "zero\freertos.o"
 "zero\can.o"
+"zero\dma.o"
 "zero\tim.o"
+"zero\usart.o"
 "zero\stm32f4xx_it.o"
 "zero\stm32f4xx_hal_msp.o"
 "zero\stm32f4xx_hal_can.o"
@@ -23,6 +25,7 @@
 "zero\stm32f4xx_hal_exti.o"
 "zero\stm32f4xx_hal_tim.o"
 "zero\stm32f4xx_hal_tim_ex.o"
+"zero\stm32f4xx_hal_uart.o"
 "zero\system_stm32f4xx.o"
 "zero\croutine.o"
 "zero\event_groups.o"
@@ -39,6 +42,8 @@
 "zero\motortask.o"
 "zero\can_receive.o"
 "zero\pid.o"
+"zero\usart1.o"
+"zero\remote_control.o"
 --strict --scatter "ZERO\ZERO.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -20,7 +20,9 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "can.h"
+#include "dma.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -61,6 +63,7 @@ void can_filter_init(void);
 
 uint32_t time_ms = 0;
 int time_second = 0;
+uint8_t sbus_buf[18];
 /* USER CODE END 0 */
 
 /**
@@ -91,13 +94,17 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM1_Init();
   MX_CAN1_Init();
   MX_TIM7_Init();
+  MX_USART1_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
 	HAL_TIM_Base_Start_IT(&htim7);
 	can_filter_init();
+	HAL_UART_Receive_DMA(&huart3,sbus_buf,18);
 	
   /* USER CODE END 2 */
 

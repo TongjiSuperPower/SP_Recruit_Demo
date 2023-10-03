@@ -22,6 +22,7 @@ typedef struct
 
 extern motor_data_t motor_6020;
 extern motor_data_t motor_3508;
+extern bool_t motor_flag;
 fp32 rad_format(fp32 rad);
 
 #endif
